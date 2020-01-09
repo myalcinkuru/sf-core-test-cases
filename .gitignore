@@ -5,7 +5,6 @@
 .tmp/*
 .templates/*
 output/*
-plugins/*
 !output/Android/README.md
 !output/iOS/README.md
 !plugin/Android/README.md
