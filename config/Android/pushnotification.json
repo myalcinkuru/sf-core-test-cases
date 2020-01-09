@@ -1,0 +1,12 @@
+ {
+    "notification" :{
+        "title": "title-key",
+        "body": "body-key",
+        "icon": "icon-key",
+        "v21":{
+            "channelId": "channelId-key",
+            "channelIdTitle": "channelIdTitle-key",
+            "channelIdImportance": "channelIdImportance-key"
+        } 
+    }
+} 

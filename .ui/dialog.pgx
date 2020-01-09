@@ -1,0 +1,98 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "321b-8d00-dddc-02dd",
+			"userProps": {},
+			"className": ".page",
+			"props": {
+				"name": "dialog",
+				"parent": null,
+				"children": [
+					"14e4-6699-3659-6f80",
+					"b5f6-1636-52d3-9252"
+				],
+				"orientation": "PORTRAIT"
+			},
+			"version": "6.15.1",
+			"initialized": false
+		},
+		{
+			"type": "StatusBar",
+			"id": "14e4-6699-3659-6f80",
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"name": "statusBar",
+				"parent": "321b-8d00-dddc-02dd",
+				"children": [],
+				"visible": true,
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "b5f6-1636-52d3-9252",
+			"userProps": {
+				"title": "dialog"
+			},
+			"className": ".headerBar",
+			"props": {
+				"name": "headerBar",
+				"parent": "321b-8d00-dddc-02dd",
+				"children": [],
+				"title": "dialog",
+				"visible": true,
+				"isRemovable": false
+			}
+		}
+	],
+	"componentByID": {
+		"767e-b476-e6e3-8521": {
+			"type": "Page",
+			"id": "767e-b476-e6e3-8521",
+			"userProps": {},
+			"className": ".page",
+			"props": {
+				"name": "dialog",
+				"parent": null,
+				"children": [
+					"3fa7-fcea-a694-1afe",
+					"91b3-5598-984f-e89a"
+				],
+				"orientation": "PORTRAIT"
+			},
+			"version": "6.15.1",
+			"initialized": false
+		},
+		"3fa7-fcea-a694-1afe": {
+			"type": "StatusBar",
+			"id": "3fa7-fcea-a694-1afe",
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"name": "statusBar",
+				"parent": "767e-b476-e6e3-8521",
+				"children": [],
+				"visible": true,
+				"isRemovable": false
+			}
+		},
+		"91b3-5598-984f-e89a": {
+			"type": "HeaderBar",
+			"id": "91b3-5598-984f-e89a",
+			"userProps": {
+				"title": "dialog"
+			},
+			"className": ".headerBar",
+			"props": {
+				"name": "headerBar",
+				"parent": "767e-b476-e6e3-8521",
+				"children": [],
+				"title": "dialog",
+				"visible": true,
+				"isRemovable": false
+			}
+		}
+	}
+}
