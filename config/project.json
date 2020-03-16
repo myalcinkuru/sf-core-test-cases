@@ -86,7 +86,7 @@
 					"aars": {},
 					"modules": {}
 				},
-				"playerPath": null
+				"playerPath": "./Player.zip"
 			},
 			"keys": {
 				"config3DESMasterKey": "wZSH6otj3IoAK4JimYk+g9EFaMc98ryZ",
