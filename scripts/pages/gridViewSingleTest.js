@@ -14,7 +14,7 @@ const COLORS = [
     "#ffffff", "#e6f7ff", "#cceeff", "#b3e6ff", "#99ddff", "#80d4ff", "#66ccff",
     "#4dc3ff", "#33bbff", "#1ab2ff", "#00aaff", "#0099e6", "#0088cc", "#0077b3",
     "#006699"
-];
+];                                                                                                      
 
 module.exports = extend(Page)(
     function(_super) {

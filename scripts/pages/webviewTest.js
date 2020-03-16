@@ -3,19 +3,23 @@ const Application = require("sf-core/application");
 const extend = require("js-base/core/extend");
 const FlexLayout = require('sf-core/ui/flexlayout');
 const WebView = require('sf-core/ui/webview');
+const Color = require('sf-core/ui/color');
+
 var Page1 = extend(Page)(
     function(_super) {
         _super(this, {
             onShow: function(params) {
                 Application.statusBar.visible = false;
                 this.headerBar.visible = false;
-
-                myWebView.loadURL('https://www.smartface.io');
+                
+                // myWebView.loadURL('https://www.smartface.io');
             }
         });
         this.layout.flexDirection = FlexLayout.FlexDirection.ROW;
         this.layout.justifyContent = FlexLayout.JustifyContent.CENTER;
         this.layout.alignItems = FlexLayout.AlignItems.CENTER;
+
+        this.layout.backgroundColor = Color.RED;
 
         var myWebView = new WebView({
             left: 10,
@@ -54,6 +58,9 @@ var Page1 = extend(Page)(
         };
 
         myWebView.android.page = this;
+        myWebView.backgroundColor = Color.TRANSPARENT;
+
+        //myWebView.nativeObject.setBackgroundColor(0);
 
         this.layout.addChild(myWebView);
     }

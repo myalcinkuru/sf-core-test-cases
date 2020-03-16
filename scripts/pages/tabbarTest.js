@@ -1,35 +1,26 @@
-const AttributedString = require("sf-core/ui/attributedstring");
-const Font = require("sf-core/ui/font");
 const Image = require('sf-core/ui/image');
 const extend = require("js-base/core/extend");
+const TabBarController = require('sf-core/ui/tabbarcontroller');
 const Color = require('sf-core/ui/color');
 const TabBarItem = require('sf-core/ui/tabbaritem');
 const Page = require('sf-core/ui/page');
-
-const TabbarExtendedController = require("sf-core/ui/tabbarcontroller");
-
 const SamplePage = extend(Page)(
     function(_super, params) {
         _super(this, params);
-        this.layout.backgroundColor = params.bgColor;
-        this.onHide = () => {
-            console.log(" ON HIDE SamplePage")
-        }
+        // this.statusBar.visible = false;
     }
 );
 
-var pgRecents = new SamplePage({ bgColor: Color.BLACK });
-var pgFavorites = new SamplePage({ bgColor: Color.BLUE });
-var pgContacts = new SamplePage({ bgColor: Color.WHITE });
-var pgMessages = new SamplePage({ bgColor: Color.YELLOW });
+var pgRecents = new SamplePage();
+var pgFavorites = new SamplePage();
+var pgContacts = new SamplePage();
+var pgMessages = new SamplePage();
+var tabPages = [pgRecents, pgFavorites, pgContacts, pgMessages];
 
-var tabPages = [pgRecents, pgFavorites, pgContacts];
-
-var TabBarController1 = extend(TabbarExtendedController)(
+var TabBarController1 = extend(TabBarController)(
     function(_super, params) {
         _super(this);
         this.onPageCreate = function(index) {
-            // console.log(" onPageCreate  index " + index);
             return tabPages[index];
         };
         this.onShow = function() {
@@ -39,10 +30,6 @@ var TabBarController1 = extend(TabbarExtendedController)(
             console.log("hidden");
         }.bind(this);
         this.onLoad = function() {
-            console.log(" ===>>  " + (undefined instanceof TabBarItem));
-            console.log(" ===>>  " + (this.constructor === TabBarController1));
-            console.log(" ===>>  " + (this.constructor === "TabBarController1"));
-
             this.scrollEnabled = true;
             this.indicatorColor = Color.BLACK;
             this.indicatorHeight = 3;
@@ -54,9 +41,8 @@ var TabBarController1 = extend(TabbarExtendedController)(
             this.items = items;
             this.autoCapitalize = true;
         }.bind(this);
-        this.onSelected = (index) => {
-            // console.log("Selected item index: " + index);
-            // console.log(" current index " + this.selectedIndex);
+        this.onSelected = function(index) {
+            console.log("Selected item index: " + index);
         };
     }
 );
@@ -65,58 +51,22 @@ var favImage = Image.createFromFile("images://icon.png");
 var contactImage = Image.createFromFile("images://icon.png");
 var messageImage = Image.createFromFile("images://icon.png");
 
-var seleceteImg = Image.createFromFile("images://smartface.png");
-
-var attributeString = new AttributedString();
-attributeString.string = "First\n";
-attributeString.foregroundColor = Color.GREEN;
-
-//Constructor value ? 
 var recentItem = new TabBarItem({
-    icon: recentsImage,
-    title: "TESTEST"
+    title: "Recent",
+    icon: recentsImage
 });
-
-setTimeout(() => {
-    recentItem.android.attributedTitle = attributeString;
-}, 2000);
-
-
-var attributeString1 = new AttributedString();
-attributeString1.string = "Favorite\n";
-attributeString1.foregroundColor = Color.PURPLE;
-
 var favItem = new TabBarItem({
-    android: {
-        attributedTitle: attributeString,
-        systemIcon : 17301545
-    }
+    title: "Favorite",
+    icon: favImage
 });
-
-setTimeout(() => {
-    favItem.icon = {
-        normal: favImage,
-        selected: seleceteImg
-    };
-}, 8000);
-
-
 var contactItem = new TabBarItem({
     title: "Contact",
-    icon: {
-        normal: favImage,
-        selected: seleceteImg
-    }
+    icon: contactImage
 });
-
-
 var messageItem = new TabBarItem({
     title: "Message",
-    icon: {
-        normal: favImage,
-        selected: seleceteImg
-    }
+    icon: messageImage
 });
-var items = [recentItem, favItem, contactItem];
 
+var items = [recentItem, favItem, contactItem, messageItem];
 module.exports = TabBarController1;

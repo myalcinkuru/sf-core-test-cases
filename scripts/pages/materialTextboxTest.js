@@ -95,8 +95,8 @@ module.exports = extend(Page)(
         mtbUsername.height = isIOS ? TB_HEIGHT_IOS : (TB_HEIGHT_ANDROID + 40);
         mtbUsername.ios.clearButtonEnabled = true;
 
-        const NORMAL_FONT2 = Font.create(Font.DEFAULT, 15, Font.NORMAL);
-        const BIGGER_FONT2 = Font.create(Font.DEFAULT, 30, Font.BOLD);
+        // const NORMAL_FONT2 = Font.create(Font.DEFAULT, 15, Font.NORMAL);
+        // const BIGGER_FONT2 = Font.create(Font.DEFAULT, 30, Font.BOLD);
 
         // mtbUsername.nativeObject.setHintEnabled(true);
         // mtbUsername.nativeObject.setHint("Username2");
@@ -104,8 +104,8 @@ module.exports = extend(Page)(
         mtbUsername.hint = "Username2"
 
         // mtbUsername.nativeObject.setHintEnabled(false);
-        mtbUsername.labelsFont = BIGGER_FONT2; // Font of error & hint area
-        mtbUsername.font = NORMAL_FONT2; // Font of editable area
+        // mtbUsername.labelsFont = BIGGER_FONT2; // Font of error & hint area
+        // mtbUsername.font = NORMAL_FONT2; // Font of editable area
 
 
 
@@ -123,8 +123,8 @@ module.exports = extend(Page)(
         // On Android, height must be higher (Refer "Height difference")
         mtbPassword.height = isIOS ? TB_HEIGHT_IOS : (TB_HEIGHT_ANDROID + 40);
         mtbPassword.ios.clearButtonEnabled = true;
-        mtbPassword.font = BIGGER_FONT; // Font of editable area
-        mtbPassword.labelsFont = NORMAL_FONT; // Font of error & hint area
+        // mtbPassword.font = BIGGER_FONT; // Font of editable area
+        // mtbPassword.labelsFont = NORMAL_FONT; // Font of error & hint area
         mtbPassword.enableErrorMessage = true;
         isIOS && (mtbPassword.marginBottom = 30);
 

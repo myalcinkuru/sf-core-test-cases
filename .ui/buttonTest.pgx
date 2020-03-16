@@ -1,0 +1,96 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "25f7-006f-315c-c8c9",
+			"userProps": {},
+			"className": ".page",
+			"props": {
+				"name": "buttonTest",
+				"parent": null,
+				"children": [
+					"1ebf-3704-3a3e-8d33",
+					"73e5-a127-00ed-1eb7"
+				],
+				"orientation": "PORTRAIT"
+			},
+			"initialized": false
+		},
+		{
+			"type": "StatusBar",
+			"id": "1ebf-3704-3a3e-8d33",
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"name": "statusBar",
+				"parent": "25f7-006f-315c-c8c9",
+				"children": [],
+				"visible": true,
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "73e5-a127-00ed-1eb7",
+			"userProps": {
+				"title": "buttonTest"
+			},
+			"className": ".headerBar",
+			"props": {
+				"name": "headerBar",
+				"parent": "25f7-006f-315c-c8c9",
+				"children": [],
+				"title": "buttonTest",
+				"visible": true,
+				"isRemovable": false
+			}
+		}
+	],
+	"componentByID": {
+		"4886-dc57-6673-5771": {
+			"type": "Page",
+			"id": "25f7-006f-315c-c8c9",
+			"userProps": {},
+			"className": ".page",
+			"props": {
+				"name": "buttonTest",
+				"parent": null,
+				"children": [
+					"1ebf-3704-3a3e-8d33",
+					"73e5-a127-00ed-1eb7"
+				],
+				"orientation": "PORTRAIT"
+			},
+			"initialized": false
+		},
+		"c964-de2f-34be-5e8b": {
+			"type": "StatusBar",
+			"id": "1ebf-3704-3a3e-8d33",
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"name": "statusBar",
+				"parent": "25f7-006f-315c-c8c9",
+				"children": [],
+				"visible": true,
+				"isRemovable": false
+			}
+		},
+		"7470-aa1f-609e-4e45": {
+			"type": "HeaderBar",
+			"id": "73e5-a127-00ed-1eb7",
+			"userProps": {
+				"title": "buttonTest"
+			},
+			"className": ".headerBar",
+			"props": {
+				"name": "headerBar",
+				"parent": "25f7-006f-315c-c8c9",
+				"children": [],
+				"title": "buttonTest",
+				"visible": true,
+				"isRemovable": false
+			}
+		}
+	}
+}

@@ -1,10 +1,10 @@
 /* globals lang */
-require("i18n/i18n.js"); // Generates global lang object
+require('i18n/i18n.js'); // Generates global lang object
 
-const Application = require("sf-core/application");
+const Application = require('sf-core/application');
 const OS = require('sf-core/device/system').OS;
 
-const Notifications = require("sf-core/notifications");
+// const Notifications = require('sf-core/notifications');
 
 // Notifications.registerForPushNotifications(
 //     function success(e) {
@@ -24,10 +24,10 @@ const Notifications = require("sf-core/notifications");
 // Set uncaught exception handler, all exceptions that are not caught will
 // trigger onUnhandledError callback.
 Application.onUnhandledError = function(e) {
-    alert({
-        title: e.type || lang.applicationError,
-        message: OS === "Android" ? e.stack : (e.message + "\n\n*" + e.stack)
-    });
+  console.log("Error -> ", {
+    title: e.type || lang.applicationError,
+    message: OS === 'Android' ? e.stack : (e.message + '\n\n*' + e.stack),
+  });
 };
 
 // Notifications.registerForPushNotifications(
@@ -60,8 +60,6 @@ Application.onUnhandledError = function(e) {
 // Notifications.removeAllDeliveredNotifications();
 // console.log("hoops removed all notification")
 
-
-require("sf-extension-utils");
-require("./theme");
-const router = require("./routes");
-router.push("/pages/alertTest");
+require('./theme');
+const router = require('./routes');
+router.push('/pages/listViewTest');

@@ -12,7 +12,7 @@ const WINDOW_SERVICE = 'window';
 var Page = require("sf-core/ui/page");
 
 const Page1 = extend(Page)(
-    function(_super) {
+    function(_super) {  
         var self = this;
         _super(self);
         // this.parentController.headerBar.visible = false;
@@ -20,7 +20,7 @@ const Page1 = extend(Page)(
         this.onShow = function() {
             Application.statusBar.visible = true;
             this.headerBar.visible = true;
-
+            
             // this.parentController.headerBar.backgroundColor = Color.BLUE;
             // this.parentController.headerBar.visible = false;
 

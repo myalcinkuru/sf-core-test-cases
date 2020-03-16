@@ -3,7 +3,10 @@
 		"theme": {
 			"currentTheme": "baseTheme",
 			"baseTheme": "baseTheme",
-			"themes": ["defaultTheme","baseTheme"]
+			"themes": [
+				"defaultTheme",
+				"baseTheme"
+			]
 		},
 		"paths": {
 			"pgxFolder": ".ui",

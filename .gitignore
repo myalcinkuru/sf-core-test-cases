@@ -10,5 +10,7 @@ output/*
 !plugin/Android/README.md
 !plugin/iOS/README.md
 node_modules/
-scripts/ui
-scripts/themes
+scripts/package-lock.json
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxxT/CTpR85xJAU6ZBRzZDRbss2Jxt8ZHaydaNoBPBXrKS3Qsssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxxT/CTpR85xJAU6ZBRzZDRbss2
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxxT/CTpR85xJAU6ZBRzZDRbss2Jxt8ZHaydaNoBPBXrKS3QsO6YNJ9UrkRIVH0d7dzsmBy4SLPqEsy3elYkMDDnHCH6JvF/QX9WYtEA2JLApECeTvxLb+++

@@ -31,20 +31,27 @@ var Page1 = extend(Page)(
         console.log(" test test");
 
         myImageView.onTouch = () => {
+            console.log("  onTouchhh ")
             myImageView.loadFromUrl({
-                url: "https://uatapclite.upskwt.com:5050/Pictures/Profile/03503603.png",
+                url: "https://via.placeholder.com/150",
                 placeholder: Image.createFromFile("images://smartface.png"),
                 android: {
                     memoryPolicy: ImageView.Android.MemoryPolicy.NO_CACHE
                 },
-                fade: false
+                fade: false,
+                onSuccess: () => {
+                    console.log("on success");
+                },
+                onFailure: () => {
+                    console.log("on failure");
+                }
             });
 
-            console.log("ImageView.Android.MemoryPolicy.NO_CACHE " + ImageView.Android.MemoryPolicy.NO_CACHE);
-            console.log("ImageView.Android.MemoryPolicy.NO_STORE " + ImageView.Android.MemoryPolicy.NO_STORE);
+            // console.log("ImageView.Android.MemoryPolicy.NO_CACHE " + ImageView.Android.MemoryPolicy.NO_CACHE);
+            // console.log("ImageView.Android.MemoryPolicy.NO_STORE " + ImageView.Android.MemoryPolicy.NO_STORE);
 
-            console.log("ImageView.Android.NetworkPolicy.NO_STORE " + ImageView.Android.NetworkPolicy.NO_STORE);
-            console.log("ImageView.Android.NetworkPolicy.NO_CACHE " + ImageView.Android.NetworkPolicy.NO_CACHE);
+            // console.log("ImageView.Android.NetworkPolicy.NO_STORE " + ImageView.Android.NetworkPolicy.NO_STORE);
+            // console.log("ImageView.Android.NetworkPolicy.NO_CACHE " + ImageView.Android.NetworkPolicy.NO_CACHE);
 
 
             // myImageView.loadFromFile({
@@ -57,14 +64,14 @@ var Page1 = extend(Page)(
             //     }
             // });
 
-            myImageView.fetchFromUrl({
-                url: "https://productimages.hepsiburada.net/s/28/884/10220114280498.jpg",
-                placeholder: Image.createFromFile("images://smartface.png"),
-                android: {
-                    networkPolicy: ImageView.Android.NetworkPolicy.NO_STORE,
-                    memoryPolicy: [ImageView.Android.MemoryPolicy.NO_CACHE, ImageView.Android.MemoryPolicy.NO_STORE]
-                }
-            });
+            // myImageView.fetchFromUrl({
+            //     url: "https://productimages.hepsiburada.net/s/28/884/10220114280498.jpg",
+            //     placeholder: Image.createFromFile("images://smartface.png"),
+            //     android: {
+            //         networkPolicy: ImageView.Android.NetworkPolicy.NO_STORE,
+            //         memoryPolicy: [ImageView.Android.MemoryPolicy.NO_CACHE, ImageView.Android.MemoryPolicy.NO_STORE]
+            //     }
+            // });
         };
     }
 );

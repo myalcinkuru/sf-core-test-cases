@@ -19,6 +19,7 @@ var Page1 = extend(Page)(
             message: "Alert Message"
 
         });
+    
 
         // myAlertView1.addTextBox({
         //     text: "sdsdsdasd",
@@ -59,7 +60,7 @@ var Page1 = extend(Page)(
         });
 
         let textBox1 = new TextBox({
-            text: "tes1t",
+            text: "3123123123123",
             width: 250,
             height: 100
         });
