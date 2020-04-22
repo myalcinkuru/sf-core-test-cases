@@ -6,7 +6,6 @@ const Crashlytics = require("sf-plugin-firebase/fabric/crashlytics");
 const Answers = require("sf-plugin-firebase/fabric/answers");
 const Firebase = require('sf-plugin-firebase');
 
-
 var Page1 = extend(Page)(
     function (_super) {
         var page = this;
