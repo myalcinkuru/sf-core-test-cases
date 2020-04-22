@@ -41,12 +41,7 @@ function $Page1(_super, props) {
 $Page1.$$styleContext = {
 	classNames: '.page',
 	defaultClassNames: ' .default_page',
-	userProps: {
-		flexProps: { justifyContent: 'SPACE_BETWEEN', alignItems: 'STRETCH' },
-		paddingBottom: 20,
-		paddingLeft: 16,
-		paddingRight: 16
-	},
+	userProps: { flexProps: { justifyContent: 'SPACE_BETWEEN', alignItems: 'STRETCH' }, paddingBottom: 20, paddingLeft: 16, paddingRight: 16 },
 	statusBar: {
 		classNames: '.statusBar',
 		defaultClassNames: ' .default_statusBar',

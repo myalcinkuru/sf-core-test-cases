@@ -17,12 +17,12 @@ module.exports = extend(Page)(
                     height: 70,
                     width: 150,
                     margin: 10,
-                    text: "Take A Photo",
+                    text: "Take A Photo", 
                     onPress: () => {
                         Multimedia.startCamera({
                             onSuccess: ({ image }) => {
-                                console.log("its is onSuccess onSuccess ! ")
-                                myImageView.image = image;
+                                console.log("startCamera is onSuccess onSuccess ! ")
+                                // myImageView.image = image;
                             },
                             aspectRatio: {
                               x: 1,
@@ -48,7 +48,7 @@ module.exports = extend(Page)(
                         Multimedia.pickFromGallery({
                             type: Multimedia.Type.IMAGE,
                             allowsEditing: true,
-                            android : {
+                            android : { 
                                 cropShape: Multimedia.Android.CropShape.OVAL
                             },
                             aspectRatio: {
@@ -56,6 +56,7 @@ module.exports = extend(Page)(
                               y: 9
                             },
                             onSuccess: ({ image }) => {
+                                 console.log("gallery its is successsss ! ")
                                 myImageView.image = image;
                             },
                             onCancel: () => {

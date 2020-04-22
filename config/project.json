@@ -38,7 +38,7 @@
 			"publisherId": ""
 		},
 		"googleCloudMessaging": {
-			"senderID": "734876119376"
+			"senderID": "262065735993"
 		},
 		"googlePlayServices": {
 			"inAppPurchaseProductKey": ""
@@ -84,9 +84,14 @@
 				},
 				"plugins": {
 					"aars": {},
-					"modules": {}
+					"modules": {
+						"firebaseplugin": {
+							"path": "plugins/Android/firebaseplugin",
+							"active": true
+						}
+					}
 				},
-				"playerPath": "./Player.zip"
+				"playerPath": null
 			},
 			"keys": {
 				"config3DESMasterKey": "wZSH6otj3IoAK4JimYk+g9EFaMc98ryZ",
@@ -96,12 +101,12 @@
 		"output": {
 			"ios": {
 				"outputFolder": "output/iOS",
-				"bundleIdentifier": "io.smartface.demo",
+				"bundleIdentifier": "io.smartface.firebasetest",
 				"targetedDeviceFamily": "universal"
 			},
 			"android": {
 				"outputFolder": "output/Android",
-				"packageName": "io.smartface.demo"
+				"packageName": "io.smartface.firebasetest"
 			}
 		},
 		"tempFolder": "output/.tmp"

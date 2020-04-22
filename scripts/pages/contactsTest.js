@@ -31,6 +31,8 @@ var Page1 = extend(Page)(
                     var contact = new Contacts.Contact();
                     console.log("firstName : " + contact.firstName);
                     contact.firstName = "First Name";
+                    contact.title = "TITLESS";
+                    contact.organization = "ORGASS";
                     console.log("firstName : " + contact.firstName);
                     console.log("lastName : " + contact.lastName);
                     contact.lastName = "Last Name";
@@ -56,11 +58,16 @@ var Page1 = extend(Page)(
                     console.log("addresses : " + contact.addresses);
                     contact.addresses = ["Adress", "Adress 1"];
                     console.log("addresses : " + contact.addresses);
+
                     var contact2 = new Contacts.Contact();
-                    console.log("firstName : " + contact2.firstName);
-                    contact2.firstName = "First Name";
-                    console.log("firstName : " + contact2.firstName);
-                    Share.share({ items: [contact, contact2], page: myPage, blacklist: [Share.ios.Twitter, Share.ios.Facebook] });
+                    // console.log("firstName : " + contact2.firstName);
+                    // contact2.firstName = "First Name";
+                    // console.log("firstName : " + contact2.firstName);
+                    contact2.phoneNumbers = ["05350000000", "05350000001"];
+
+                    // Share.share({ items: [contact, contact2], page: myPage, blacklist: [Share.ios.Twitter, Share.ios.Facebook] });
+                    
+                    Share.shareContacts({ items: [contact,contact2], page: myPage, blacklist: [Share.ios.Twitter, Share.ios.Facebook] });
                 };
                 this.layout.addChild(button);
                 var button2 = new Button();
@@ -72,7 +79,6 @@ var Page1 = extend(Page)(
                     Contacts.pickContact({
                         onSuccess: function (contact) {
                             console.log("Success :", contact);
-                            console.log("Success 2 :" + contact);
                             contact.addresses = ["Adress", "Adress 1"];
                             Share.share({ items: [contact], page: myPage, blacklist: [Share.ios.Twitter, Share.ios.Facebook] });
                         },
@@ -113,13 +119,14 @@ var Page1 = extend(Page)(
                 button4.text = "Add";
                 button4.onPress = function () {
                     var contact = new Contacts.Contact();
-                    contact.firstName = "Test Ekleme 5";
-                    var result = Application.android.checkPermission(Application.android.Permissions.READ_CONTACTS);
+                    contact.organization = "ORGAs"
+                    contact.firstName = "Test Ekleme 5 ";
+                    var result = Application.android.checkPermission(Application.android.Permissions.WRITE_CONTACTS);
                     if (!result) {
                         var permissionCode = 1001;
-                        Application.android.requestPermissions(permissionCode, Application.android.Permissions.READ_CONTACTS);
+                        Application.android.requestPermissions(permissionCode, Application.android.Permissions.WRITE_CONTACTS);
                     }
-                    result = Application.android.checkPermission(Application.android.Permissions.READ_CONTACTS);
+                    result = Application.android.checkPermission(Application.android.Permissions.WRITE_CONTACTS);
                     Contacts.add({
                         onSuccess: function () {
                             console.log("Success");

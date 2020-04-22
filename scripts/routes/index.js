@@ -127,6 +127,10 @@ module.exports = Router.of({
                     path: '/pages/documentPickerTest',
                     build: buildExtender({ getPageClass: () => require('pages/documentPickerTest'), headerBarStyle: { visible: true } }),
                 }),
+                Route.of({
+                    path: '/pages/firebaseTest',
+                    build: buildExtender({ getPageClass: () => require('pages/firebaseTest'), headerBarStyle: { visible: true } }),
+                }),
                 StackRouter.of({
                     path: '/pages/modal',
                     modal: true,

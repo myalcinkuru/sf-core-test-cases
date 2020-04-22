@@ -150,19 +150,6 @@ var Page1 = extend(Page)(
                 }).complete(function () {
                     console.log("bitttiiiiii1!!!")
                 });
-
-                // myListView.itemCount -= 1;
-                // let index = myListView.indexByListViewItem(mlistViewItem);
-                // myDataSet.splice(index, 1);
-                // myDataSet.splice(index, 0, {
-                //     title: `${index} ` + "Rf.",
-                //     backgroundColor: Color.create("#99d9f9")
-                // });
-
-                // myListView.refreshRowRange({
-                //     positionStart: index,
-                //     itemCount: 1
-                // });
             }.bind(listViewItem);
         };
         myListView.onRowSelected = function (listViewItem, index) {

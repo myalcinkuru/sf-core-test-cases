@@ -1,8 +1,24 @@
-/* globals lang */
+/* globals lang require */
 require('i18n/i18n.js'); // Generates global lang object
 
 const Application = require('sf-core/application');
 const OS = require('sf-core/device/system').OS;
+
+const Firebase = require('sf-plugin-firebase');
+const File = require('sf-core/io/file');
+var iOSPlistFile = new File({
+    path: 'assets://GoogleService-Info.plist'
+});
+var firebaseConfig = {
+    iosFile : iOSPlistFile
+};
+Firebase.initializeApp(firebaseConfig);
+
+const Fabric = require("sf-plugin-firebase/fabric");
+const Crashlytics = require("sf-plugin-firebase/fabric/crashlytics");
+const Answers = require("sf-plugin-firebase/fabric/answers");
+
+Fabric.with([new Crashlytics(), new Answers()]);
 
 // const Notifications = require('sf-core/notifications');
 
@@ -61,5 +77,5 @@ Application.onUnhandledError = function(e) {
 // console.log("hoops removed all notification")
 
 require('./theme');
-const router = require('./routes');
-router.push('/pages/listViewTest');
+const router = require('./routes'); 
+router.push('/pages/firebaseTest');
