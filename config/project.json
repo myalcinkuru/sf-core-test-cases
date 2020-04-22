@@ -64,8 +64,8 @@
 					},
 					"firebaseios": {
 						"path": "plugins/iOS/firebaseios.zip",
-						"active": true,
-						"crashlytics": true
+						"active": false,
+						"crashlytics": false
 					}
 				},
 				"playerPath": null
