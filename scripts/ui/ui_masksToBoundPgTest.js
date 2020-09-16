@@ -10,7 +10,7 @@
 const extend = require('js-base/core/extend');
 const PageBase = require('sf-core/ui/page');
 const Page = extend(PageBase);
-const pageContextPatch = require('@smartface/contx/lib/smartface/pageContextPatch');
+import pageContextPatch from '@smartface/contx/lib/smartface/pageContextPatch';
 
 function addChild(childName, ChildClass, pageInstance) {
 	this.children = this.children || {};

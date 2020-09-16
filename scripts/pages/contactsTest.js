@@ -23,7 +23,7 @@ var Page1 = extend(Page)(
                 var myPage = this;
 
                 console.log(" Contact Test ");
-                var button = new Button(); 
+                var button = new Button();
                 button.backgroundColor = Color.RED;
                 button.height = 100;
                 button.text = "Share";
@@ -66,8 +66,8 @@ var Page1 = extend(Page)(
                     contact2.phoneNumbers = ["05350000000", "05350000001"];
 
                     // Share.share({ items: [contact, contact2], page: myPage, blacklist: [Share.ios.Twitter, Share.ios.Facebook] });
-                    
-                    Share.shareContacts({ items: [contact,contact2], page: myPage, blacklist: [Share.ios.Twitter, Share.ios.Facebook] });
+
+                    Share.shareContacts({ items: [contact, contact2], page: myPage, blacklist: [Share.ios.Twitter, Share.ios.Facebook] });
                 };
                 this.layout.addChild(button);
                 var button2 = new Button();
@@ -139,6 +139,23 @@ var Page1 = extend(Page)(
                     });
                 };
                 this.layout.addChild(button4);
+
+                var button5 = new Button();
+                button5.font = Font.create(Font.DEFAULT, 10);
+                button5.backgroundColor = Color.RED;
+                button5.height = 100;
+                button5.text = "Get By PhoneNumber";
+                button5.onPress = function () {
+                    let searchPhoneNumber = "995574";
+                    console.log("button5.onPress " + searchPhoneNumber);
+                    let contacts = Contacts.android.getContactsByPhoneNumber(searchPhoneNumber, 
+                        {
+                            onSuccess: (value) =>  console.log("contacts get by phone number", value),
+                            onFailure: (error) => console.log("contacts error", error)
+                        }
+                        );
+                };
+                this.layout.addChild(button5);
             }
         });
     }

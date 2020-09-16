@@ -10,7 +10,7 @@
 const extend = require('js-base/core/extend');
 const PageBase = require('sf-core/ui/page');
 const Page = extend(PageBase);
-const pageContextPatch = require('@smartface/contx/lib/smartface/pageContextPatch');
+import pageContextPatch from '@smartface/contx/lib/smartface/pageContextPatch';
 const Label = extend(require('sf-core/ui/label'));
 const Button = extend(require('sf-core/ui/button'));
 
@@ -76,7 +76,8 @@ $Lbl.$$styleContext = {
 		textAlignment: 'MIDCENTER',
 		textColor: 'rgba( 210, 210, 210, 1 )',
 		top: 0,
-		width: null
+		width: null,
+		testId: 'e-IWftoow'
 	}
 };
 const $Lbl_ = Label($Lbl);
@@ -89,7 +90,7 @@ function $BtnSayHello(_super, pageInstance) {
 $BtnSayHello.$$styleContext = {
 	classNames: '.button',
 	defaultClassNames: '.default_common .default_button',
-	userProps: { flexProps: { alignSelf: 'AUTO', positionType: 'RELATIVE' }, left: 0, top: 0, width: null }
+	userProps: { flexProps: { alignSelf: 'AUTO', positionType: 'RELATIVE' }, left: 0, top: 0, width: null, testId: 'jYFiy-IjKa' }
 };
 const $BtnSayHello_ = Button($BtnSayHello);
 

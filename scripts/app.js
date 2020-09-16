@@ -2,7 +2,7 @@
 require('i18n/i18n.js'); // Generates global lang object
 
 const Application = require('sf-core/application');
-const OS = require('sf-core/device/system').OS;
+// const OS = require('sf-core/device/system').OS;
 
 // const Firebase = require('sf-plugin-firebase');
 // const File = require('sf-core/io/file');
@@ -76,6 +76,11 @@ Application.onUnhandledError = function(e) {
 // Notifications.removeAllDeliveredNotifications();
 // console.log("hoops removed all notification")
 
+// const System = require('sf-core/device/system');
+// console.log(" system 64 " + System.android.supported64BitAbis);
+// console.log(" system 32 " + System.android.supported32BitAbis);
+
+
 require('./theme');
 const router = require('./routes'); 
-router.push('/pages/firebaseTest');
+router.push('/pages/deviceInfoTest');

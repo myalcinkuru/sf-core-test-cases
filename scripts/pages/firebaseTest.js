@@ -5,6 +5,7 @@ const Fabric = require("sf-plugin-firebase/fabric");
 const Crashlytics = require("sf-plugin-firebase/fabric/crashlytics");
 const Answers = require("sf-plugin-firebase/fabric/answers");
 const Firebase = require('sf-plugin-firebase');
+const System = require('sf-core/device/system');
 
 var Page1 = extend(Page)(
     function (_super) {
@@ -15,6 +16,7 @@ var Page1 = extend(Page)(
                 this.headerBar.visible = false;
             },
             onLoad: function (params) {
+
                 // var myPage = this;
                 // /*
                 //   You can use Crashlytics.setUserIdentifier to provide an ID number, token, or hashed value that uniquely     

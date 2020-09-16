@@ -15,10 +15,14 @@ module.exports = Router.of({
     routes: [
         StackRouter.of({
             path: '/pages',
-            to: "/pages/headerBarTest",
+            to: "/pages/materialTextboxTestDoc",
             homeRoute: 0,
             isRoot: true,
             routes: [
+                Route.of({
+                    path: '/pages/materialTextboxTestDoc',
+                    build: buildExtender({ getPageClass: () => require('pages/materialTextboxTestDoc'), headerBarStyle: { visible: true } }),
+                }),
                 Route.of({
                     path: '/pages/searchViewTest',
                     build: buildExtender({ getPageClass: () => require('pages/searchViewTest'), headerBarStyle: { visible: true } }),
@@ -130,6 +134,12 @@ module.exports = Router.of({
                 Route.of({
                     path: '/pages/firebaseTest',
                     build: buildExtender({ getPageClass: () => require('pages/firebaseTest'), headerBarStyle: { visible: true } }),
+                }),Route.of({
+                    path: '/pages/searchViewAnimationTest',
+                    build: buildExtender({ getPageClass: () => require('pages/searchViewAnimationTest'), headerBarStyle: { visible: true } }),
+                }),Route.of({
+                    path: '/pages/deviceInfoTest',
+                    build: buildExtender({ getPageClass: () => require('pages/deviceInfoTest'), headerBarStyle: { visible: true } }),
                 }),
                 StackRouter.of({
                     path: '/pages/modal',
@@ -168,6 +178,16 @@ module.exports = Router.of({
 // let btbItemMessages = new TabBarItem();
 // btbItemMessages.title = "Messages";
 // btbItemMessages.icon = Image.createFromFile("images://icon.png");
+// btbItemMessages.badge.visible = true;
+// btbItemMessages.badge.text = "5";
+
+// let btbItemSetting = new TabBarItem();
+// btbItemSetting.title = "Settings";
+// btbItemSetting.icon = Image.createFromFile("images://icon.png");
+
+// // setTimeout(() => {
+// // btbItemSetting.newBadge;
+// // },10000)
 
 // const router = Router.of({
 //     path: "/",
@@ -184,15 +204,13 @@ module.exports = Router.of({
 //                 },
 //                 backgroundColor: Color.create("#00A1F1")
 //             }),
-//             items: () => [{
+//             items: () => [
+//                 {
 //                     title: "Profile",
-//                     icon: Image.createFromFile("images://icon.png")
+//                     icon: Image.createFromFile("images://icon.png"),
 //                 },
 //                 btbItemMessages, 
-//                 {
-//                     title: "Settings",
-//                     icon: Image.createFromFile("images://icon.png")
-//                 }
+//                 btbItemSetting
 //             ],
 //             // tab1
 //             routes: [
